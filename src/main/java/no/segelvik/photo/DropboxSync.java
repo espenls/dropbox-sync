@@ -1,3 +1,5 @@
+package no.segelvik.photo;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -39,7 +41,7 @@ public class DropboxSync {
 
             File f = new File("sync/" +child.asFile().name);
             if(!f.exists()) {
-                client.getFile(child.asFile().path, child.asFile().rev, new FileOutputStream(SYNC_FOLDER + "/" + child.name));
+                client.getFile(child.asFile().path, child.asFile().rev, new FileOutputStream(SYNC_FOLDER + "/" +child.name));
             }
             filesOnDropbox.add(SYNC_FOLDER + "/" + child.name);
         }
