@@ -2,9 +2,12 @@
 Java application for dropbox sync
 0) create a dropbox app:
 https://www.dropbox.com/developers/apps/create
- -> dropbox API
- -> App folder
- -> Name of the app
+ a)select dropbox API
+ b)select  App folder
+ c)choose the name of the app
+
+Under the settings, you should be able to generate an access token, which you assign to the constant ACCESS_TOKEN in DropboxSync.java
+
 
 1)Buld jar:
 mvn clean compile assembly:single
@@ -13,7 +16,7 @@ mvn clean compile assembly:single
 
 3)create slideshow.sh and copyfile.sh in the home dir for pi on raspberry(scripts are located under resources)
 
-4) ad the following to crontab:
+4)add the following to crontab:
 
 crontab -e 
 
